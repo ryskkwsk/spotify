@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>music</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 </head>
 
 <body>
@@ -28,7 +30,54 @@
         </div>
     </header>
 
+    <section class="swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide01">
+                    <div class="slide-contents">
+                        <div class="slide-contents-title">
+                            あなただけの1曲を。
+                        </div>
+                        <div class="slide-contents-text">
+                            世界中の楽曲をチェック。
+                            あの音楽が見つかる。
+                        </div>
+                    </div> <!-- slide-contents -->
+                </div> <!-- swiper-slide -->
+                <div class="swiper-slide slide02">
+                    <div class="slide-contents">
+                        <div class="slide-contents-title">
+                            音楽を共有しよう。
+                        </div>
+                        <div class="slide-contents-text">
+                            気に入った楽曲をSNSで簡単にシェアできます。
+                            シェアを通して新しい音楽と出会おう。
+                        </div>
+                    </div> <!-- slide-contents -->
+                </div> <!-- swiper-slide -->
+            </div> <!-- swiper-wrapper -->
+            <div class="swiper-button">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div> <!-- swiper-button -->
+            <div class="swiper-pagination"></div>
+        </div> <!-- swiper-container -->
+    </section> <!-- swiper -->
 
+    <script type="text/javascript">
+        var swiper = new Swiper('.swiper-container',{
+            speed: 1000, // スピード設定 1000=1秒
+            autoplay: true, // 自動切り替え trueで有効 falseで無
+            loop: true, // ループ trueで有効 falseで無効
+            navigation: {
+                nextEl: '.swiper-button-next', // 次のボタンを表示する要素指定
+                prevEl: '.swiper-button-prev' // 前のボタンを表示する要素指定
+            },
+            pagination: {
+                el: '.swiper-pagination', // ページネーションを表示する要素指定
+            }
+        });
+    </script>
 </body>
 
 </html>
